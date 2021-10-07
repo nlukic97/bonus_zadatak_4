@@ -1,0 +1,16 @@
+{
+  "name": "bonus_zadatak_4",
+  "version": "1.0.0",
+  "description": "- still to be added",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "sass public/scss/main.scss public/css/style.css -w"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {},
+  "devDependencies": {
+    "sass": "^1.42.1"
+  }
+}
