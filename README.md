@@ -1,7 +1,7 @@
 # Bonus zadatak 4 - Nikola Lukic
 
 ## Production url:
-- still to be added
+- https://bonus-zadatak-4-blush.vercel.app/
 
 
 ---
