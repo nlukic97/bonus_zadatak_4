@@ -1,6 +1,8 @@
 @import 'imports/variables';
 @import 'imports/components/buttons';
 @import 'imports/components/links';
+@import 'imports/components/card';
+
 
 body {
     font-family: 'Rubik', sans-serif;
@@ -16,7 +18,7 @@ body, * {
     margin: 0 auto;
 }
 
-.box-shadow {
+.btn-shadow {
     box-shadow: 0px 8px 8px -4px rgb(73 93 207 / 20%);
 }
 

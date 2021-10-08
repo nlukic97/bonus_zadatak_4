@@ -1,0 +1,32 @@
+// browser box component
+.card {
+    text-align: center;
+    border-radius: 15px;
+    box-shadow: 0px 10px 20px -5px rgb(73 93 207 / 20%);
+    display: inline-block;
+    height: 371px;
+    width: 280px;
+    padding-top: 50px;
+    // border: 1px solid red;
+
+    h4 {
+        margin-top: 30px;
+        font-weight: 500;
+        font-size: 20px;
+        color: $primary-black;
+        letter-spacing: 0.25px;
+    }
+
+    span {
+        margin-top:6px ;
+        display: block;
+        line-height: 28px;
+        font-size: 15px;
+        color: rgba(36, 42, 69, .5);
+        letter-spacing: 0px;
+    }
+
+    a {
+        margin-top: 60px;
+    }
+}
