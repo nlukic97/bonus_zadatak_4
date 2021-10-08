@@ -11,25 +11,40 @@ button.btn:hover {
 }
 
 a.btn, button.btn {
-  padding: 1rem;
-  font-size: 1rem;
+  display: inline-block;
   box-shadow: 0px 8px 8px -4px rgba(73, 93, 207, 0.2);
   border-radius: 5px;
   line-height: 28px;
   letter-spacing: 0.25px;
   font-size: 14px;
+  font-weight: 500;
+  border: 1px solid transparent;
+  padding: 1rem;
 }
 a.btn.btn-red, button.btn.btn-red {
   background-color: red;
   color: #fff;
 }
+a.btn.btn-red:hover, button.btn.btn-red:hover {
+  border: 1px solid #FA5959;
+  background: #fff;
+  color: #FA5959;
+}
 a.btn.btn-blue, button.btn.btn-blue {
   background-color: #5267DF;
   color: #fff;
 }
+a.btn.btn-blue:hover, button.btn.btn-blue:hover {
+  border: 1px solid #5267DF;
+  background: #fff;
+  color: #5267DF;
+}
 a.btn.btn-light, button.btn.btn-light {
   background-color: #F7F7F7;
   color: #242A45;
+}
+body {
+  font-family: "Rubik", sans-serif;
 }
 
 /*# sourceMappingURL=style.css.map */
