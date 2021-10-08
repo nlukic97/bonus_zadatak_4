@@ -1,0 +1,35 @@
+a.btn {
+  text-decoration: none;
+}
+
+button.btn {
+  outline: none;
+  border: none;
+}
+button.btn:hover {
+  cursor: pointer;
+}
+
+a.btn, button.btn {
+  padding: 1rem;
+  font-size: 1rem;
+  box-shadow: 0px 8px 8px -4px rgba(73, 93, 207, 0.2);
+  border-radius: 5px;
+  line-height: 28px;
+  letter-spacing: 0.25px;
+  font-size: 14px;
+}
+a.btn.btn-red, button.btn.btn-red {
+  background-color: red;
+  color: #fff;
+}
+a.btn.btn-blue, button.btn.btn-blue {
+  background-color: #5267DF;
+  color: #fff;
+}
+a.btn.btn-light, button.btn.btn-light {
+  background-color: #F7F7F7;
+  color: #242A45;
+}
+
+/*# sourceMappingURL=style.css.map */

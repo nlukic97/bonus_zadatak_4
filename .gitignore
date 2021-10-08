@@ -16,3 +16,4 @@
 
 # Avoid adding node_modules
 node_modules
+*$.txt
