@@ -1,13 +1,12 @@
-// button component
-
+// button component - works for a tag and for button tag
 a.btn {
     text-decoration: none;
 }
 
 button.btn {
     outline: none;
-    border: none;
-    
+    font-family: 'Rubik', sans-serif;
+
     &:hover {
         cursor: pointer;
     }
@@ -22,15 +21,15 @@ a, button {
         letter-spacing: 0.25px;
         font-size: 14px;
         font-weight: 500;
-        border: 1px solid transparent; //so that the buttons don't change height upon hover - box-sizing:border-box does not work
+        border: 2px solid transparent; //so that the buttons don't change height upon hover - box-sizing:border-box does not work
         padding: 1rem;
         
         &.btn-red {
-            background-color: red;
+            background-color: $primary-red;
             color: #fff;
             
             &:hover {
-                border: 1px solid $primary-red;
+                border: 2px solid $primary-red;
                 background: $color-white;
                 color: $primary-red;
             }
@@ -42,7 +41,7 @@ a, button {
             color: $color-white;
 
             &:hover {
-                border: 1px solid $primary-blue;
+                border: 2px solid $primary-blue;
                 background: $color-white;
                 color: $primary-blue;
             }
@@ -50,9 +49,11 @@ a, button {
 
         &.btn-light {
             background-color: $primary-light;
-            color: $primary-black;
+            color: $primary-dark-gray;
 
             &:hover {
+                border: 2px solid $primary-dark-gray;
+                color: $primary-dark-gray;
 
             }
         }
