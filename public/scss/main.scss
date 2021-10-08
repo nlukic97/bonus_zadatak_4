@@ -39,3 +39,19 @@ nav {
         }
     }
 }
+
+.browsers {
+    display: flex;
+    justify-content: center;
+
+    .card {
+        margin: 0 15px;
+        &:nth-child(2) {
+            margin-top: 40px;
+        }
+
+        &:nth-child(3) {
+            margin-top: 80px;
+        }
+    }
+}
