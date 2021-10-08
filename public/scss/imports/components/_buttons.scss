@@ -6,7 +6,6 @@ a.btn {
 button.btn {
     outline: none;
     font-family: 'Rubik', sans-serif;
-    text-align: center;
 
     &:hover {
         cursor: pointer;
@@ -16,14 +15,13 @@ button.btn {
 a, button { 
     &.btn{
         display: inline-block;
-        box-shadow: 0px 8px 8px -4px rgb(73 93 207 / 20%);
         border-radius: 5px;
         line-height: 28px;
         letter-spacing: 0.25px;
         font-size: 14px;
         font-weight: 500;
         border: 2px solid transparent; //so that the buttons don't change height upon hover - box-sizing:border-box does not work
-        padding: 1rem;
+        // padding: 1rem; //maybe set this up manually
         
         &.btn-red {
             background-color: $primary-red;

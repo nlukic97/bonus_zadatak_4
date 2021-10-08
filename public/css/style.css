@@ -5,7 +5,6 @@ a.btn {
 button.btn {
   outline: none;
   font-family: "Rubik", sans-serif;
-  text-align: center;
 }
 button.btn:hover {
   cursor: pointer;
@@ -13,14 +12,12 @@ button.btn:hover {
 
 a.btn, button.btn {
   display: inline-block;
-  box-shadow: 0px 8px 8px -4px rgba(73, 93, 207, 0.2);
   border-radius: 5px;
   line-height: 28px;
   letter-spacing: 0.25px;
   font-size: 14px;
   font-weight: 500;
   border: 2px solid transparent;
-  padding: 1rem;
 }
 a.btn.btn-red, button.btn.btn-red {
   background-color: #FA5959;
@@ -49,8 +46,49 @@ a.btn.btn-light:hover, button.btn.btn-light:hover {
   color: #5B6074;
 }
 
+a.link {
+  text-decoration: none;
+  font-size: 13px;
+  line-height: 17px;
+  letter-spacing: 1.5px;
+}
+a.link.link-red {
+  color: #242A45;
+}
+a.link.link-red:hover {
+  color: #FA5959;
+}
+
 body {
   font-family: "Rubik", sans-serif;
+}
+
+body, * {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.box-shadow {
+  box-shadow: 0px 8px 8px -4px rgba(73, 93, 207, 0.2);
+}
+
+nav {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+nav .menu-items a.link, nav .menu-items a.btn {
+  text-transform: uppercase;
+  margin: 0 22px;
+}
+nav .menu-items a.btn {
+  padding: 10px 32px;
 }
 
 /*# sourceMappingURL=style.css.map */
