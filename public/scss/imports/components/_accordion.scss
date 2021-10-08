@@ -1,0 +1,61 @@
+// check all of this again
+
+.questions {
+    .question-component {
+        border-bottom: 1px solid rgba(36, 42, 69, 0.15);
+
+        .clickable-container {
+            display: flex;
+            justify-content: space-between;
+            padding: 1rem 0;
+
+            &:hover {
+                cursor: pointer;
+
+                .question-text {
+                    color:$primary-black;
+                }
+
+                .btn {
+                    cursor: pointer;
+                }
+            }
+
+            .question-text {
+                font-weight: normal;
+            }
+
+            .btn {
+                width: 10px;
+                background: url('../images/icon-arrow.svg') no-repeat center center;
+                border: none;
+                transform: rotate(0deg);
+                transition: all .4s;
+            }
+        }
+
+        .answer {
+            overflow: hidden;
+            max-height:0;
+            transition: all .4s;
+            color: $primary-black;
+        }
+
+        &.active {
+
+            .clickable-container {
+                .question-text {
+                    font-weight: bold;
+                }
+
+                .btn {
+                    transform: rotate(180deg);
+                }
+            }
+
+            .answer {
+                padding-bottom: 1rem;
+            }
+        }
+    }
+}
