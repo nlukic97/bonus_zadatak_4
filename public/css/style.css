@@ -18,6 +18,7 @@ a.btn, button.btn {
   font-size: 14px;
   font-weight: 500;
   border: 2px solid transparent;
+  padding: 10px 32px;
 }
 a.btn.btn-red, button.btn.btn-red {
   background-color: #FA5959;
@@ -86,9 +87,6 @@ nav {
 nav .menu-items a.link, nav .menu-items a.btn {
   text-transform: uppercase;
   margin: 0 22px;
-}
-nav .menu-items a.btn {
-  padding: 10px 32px;
 }
 
 /*# sourceMappingURL=style.css.map */

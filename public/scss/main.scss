@@ -26,9 +26,6 @@ nav {
     justify-content: space-between;
     align-items: center;
 
-    .logo{
-    }
-
     .menu-items a {
         &.link, &.btn {
             text-transform: uppercase;
@@ -36,7 +33,7 @@ nav {
         }
     
         &.btn {
-            padding: 10px 32px;
+            // padding: 10px 32px; //added as a btn default
         }
     }
 }

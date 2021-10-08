@@ -1,4 +1,5 @@
 // button component - works for a tag and for button tag
+//set padding manually
 a.btn {
     text-decoration: none;
 }
@@ -21,7 +22,7 @@ a, button {
         font-size: 14px;
         font-weight: 500;
         border: 2px solid transparent; //so that the buttons don't change height upon hover - box-sizing:border-box does not work
-        // padding: 1rem; //maybe set this up manually
+        padding: 10px 32px;
         
         &.btn-red {
             background-color: $primary-red;
