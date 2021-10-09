@@ -129,9 +129,6 @@ a.link.link-red:hover {
   overflow: hidden;
   max-height: 0;
   transition: all 0.4s;
-  color: rgba(36, 42, 69, 0.75);
-  line-height: 32px;
-  font-size: 16px;
   padding: 0;
 }
 .questions .question-component.active .clickable-container .btn {
@@ -152,7 +149,12 @@ a.link.link-red:hover {
 
 .section-block {
   max-width: 540px;
-  margin: 16px auto 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.pt-16 {
+  margin-top: 16px;
 }
 
 .heading-1 {
@@ -181,14 +183,21 @@ a.link.link-red:hover {
   font-size: 18px;
   line-height: 28px;
   letter-spacing: 0px;
-  color: rgba(36, 42, 69, 0.5);
+  color: rgba(36, 42, 69, 0.75);
 }
 
-.answer-text {
-  font-size: 16x;
+.answer {
+  color: rgba(36, 42, 69, 0.75);
+  font-size: 16px;
   line-height: 36px;
   letter-spacing: 0.15px;
+}
+
+p {
   color: rgba(36, 42, 69, 0.75);
+  font-size: 18px;
+  line-height: 28px;
+  letter-spacing: 0;
 }
 
 .container {
@@ -223,6 +232,13 @@ nav .menu-items a.link, nav .menu-items a.btn {
 }
 .browsers-container .browsers-flex .card:nth-child(3) {
   margin-top: 80px;
+}
+
+.faq > p {
+  margin-top: 16px;
+}
+.faq .questions {
+  margin-top: 56px;
 }
 
 body {
