@@ -136,6 +136,7 @@ a.link.link-red:hover {
 }
 .questions .question-component.active .clickable-container .btn {
   transform: rotate(180deg);
+  filter: brightness(130%) hue-rotate(119deg) saturate(110%);
 }
 .questions .question-component.active .answer {
   padding: 19px 0 29px 0;
