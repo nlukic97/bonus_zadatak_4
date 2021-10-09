@@ -219,6 +219,9 @@ nav .menu-items a.link, nav .menu-items a.btn {
   margin: 0 22px;
 }
 
+.browsers-container {
+  margin-top: 150px;
+}
 .browsers-container .browsers-flex {
   margin-top: 48px;
   display: flex;
@@ -235,7 +238,7 @@ nav .menu-items a.link, nav .menu-items a.btn {
 }
 
 .faq {
-  padding: 150px 0;
+  margin-top: 150px;
 }
 .faq .questions {
   margin-top: 56px;
