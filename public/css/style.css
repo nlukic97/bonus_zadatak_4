@@ -234,8 +234,15 @@ nav .menu-items a.link, nav .menu-items a.btn {
   margin-top: 80px;
 }
 
+.faq {
+  padding: 150px 0;
+}
 .faq .questions {
   margin-top: 56px;
+  margin-bottom: 56px;
+}
+.faq a.btn {
+  padding: 10px 24px;
 }
 
 body {

@@ -1,8 +1,7 @@
-// check all of this again
-
 .questions {
     .question-component {
         border-bottom: 1px solid rgba(36, 42, 69, 0.15);
+
         &:first-child {
             border-top: 1px solid rgba(36, 42, 69, 0.15);
         }
@@ -53,7 +52,7 @@
             .clickable-container {
                 .btn {
                     transform: rotate(180deg);
-                    filter: brightness(130%) hue-rotate(119deg) saturate(110%);
+                    filter: brightness(130%) hue-rotate(119deg) saturate(110%); //change the color to be redish
                     
                 }
             }

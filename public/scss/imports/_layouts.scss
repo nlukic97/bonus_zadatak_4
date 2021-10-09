@@ -45,11 +45,14 @@ nav {
 
 // ------ faq section ------
 .faq {
-    > h2 {
-        
-    }
+    padding: 150px 0;
 
     .questions {
         margin-top: 56px;
+        margin-bottom: 56px;
+    }
+
+    a.btn {
+        padding: 10px 24px; //override the default since it is slightly different
     }
 }
