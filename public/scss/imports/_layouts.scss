@@ -1,5 +1,5 @@
 .container {
-    max-width: 1440px;
+    max-width: 1290px;
     margin: 0 auto;
 }
 
@@ -11,7 +11,7 @@ nav {
     align-items: center;
 
     .menu-items {
-        margin-right: 72px; // do I need this here?
+        //margin-right: 72px; // do I need this here?
         a {
             &.link, &.btn {
                 text-transform: uppercase;
@@ -33,6 +33,7 @@ nav {
 
     .hero-content {
         max-width: 540px;
+
         h1 {
             margin-top: 70px;
         }
@@ -47,11 +48,28 @@ nav {
     }
 
     .hero-image {
-        text-align: right;
-        
-        img {
-            width: 97%;
+        position: relative;
+        height: min-content;
+
+        img {  
+            width: 100%;
+            margin-left: 10%;
+            // border: 1px solid orange;
+            position: relative;
         }
+
+        /* This causes an error with the overflow, otherwise it will work. */
+        &::after {
+            content:'';
+            width: 150%;
+            height: 100%;
+            background-color: #5267DF;
+            position: absolute;
+            top: 20%;
+            left: 40%;
+            z-index: -1;
+            border-radius:316px;
+        } 
     }
 }
 

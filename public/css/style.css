@@ -202,7 +202,7 @@ p {
 }
 
 .container {
-  max-width: 1440px;
+  max-width: 1290px;
   margin: 0 auto;
 }
 
@@ -211,9 +211,6 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-nav .menu-items {
-  margin-right: 72px;
 }
 nav .menu-items a.link, nav .menu-items a.btn {
   text-transform: uppercase;
@@ -241,10 +238,25 @@ nav .menu-items a.link, nav .menu-items a.btn {
   margin-top: 32px;
 }
 .hero .hero-image {
-  text-align: right;
+  position: relative;
+  height: min-content;
+  /* This causes an error with the overflow, otherwise it will work. */
 }
 .hero .hero-image img {
-  width: 97%;
+  width: 100%;
+  margin-left: 10%;
+  position: relative;
+}
+.hero .hero-image::after {
+  content: "";
+  width: 150%;
+  height: 100%;
+  background-color: #5267DF;
+  position: absolute;
+  top: 20%;
+  left: 40%;
+  z-index: -1;
+  border-radius: 316px;
 }
 
 .browsers-container {
