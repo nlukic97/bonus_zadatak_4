@@ -139,6 +139,66 @@ a.link.link-red:hover {
   padding: 19px 0 29px 0;
 }
 
+.overflow-hidden {
+  border: 1px solid orange;
+  overflow: hidden;
+}
+
+.hero {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 110px;
+  padding-bottom: 5%;
+}
+.hero .hero-content, .hero .hero-image {
+  flex: 1;
+}
+.hero .hero-content {
+  padding-top: 70px;
+}
+.hero .hero-content p {
+  margin-top: 20px;
+}
+.hero .hero-content .button-container {
+  margin-top: 32px;
+}
+.hero .hero-image {
+  width: 100%;
+  height: min-content;
+  position: relative;
+}
+.hero .hero-image::after {
+  content: "";
+  width: 150%;
+  height: 80%;
+  background-color: #5267DF;
+  position: absolute;
+  top: 30%;
+  z-index: -1;
+  border-radius: 316px;
+}
+.hero.hero-regular .hero-image {
+  text-align: right;
+}
+.hero.hero-regular .hero-image img {
+  margin-left: 10%;
+}
+.hero.hero-regular .hero-image::after {
+  left: 40%;
+}
+.hero.hero-reverse {
+  flex-direction: row-reverse;
+}
+.hero.hero-reverse .hero-image {
+  text-align: left;
+}
+.hero.hero-reverse .hero-image img {
+  margin-left: -10%;
+}
+.hero.hero-reverse .hero-image::after {
+  right: 40%;
+}
+
 .btn-shadow {
   box-shadow: 0px 8px 8px -4px rgba(73, 93, 207, 0.2);
 }
@@ -217,51 +277,6 @@ nav .menu-items a.link, nav .menu-items a.btn {
   margin: 0 22px;
 }
 
-.hero {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 110px;
-}
-.hero .hero-content, .hero .hero-image {
-  flex: 1;
-}
-.hero .hero-content {
-  max-width: 540px;
-}
-.hero .hero-content h1 {
-  margin-top: 70px;
-}
-.hero .hero-content p {
-  margin-top: 20px;
-}
-.hero .hero-content .button-container {
-  margin-top: 32px;
-}
-.hero .hero-image {
-  position: relative;
-  height: min-content;
-  /* This causes an error with the overflow, otherwise it will work. */
-}
-.hero .hero-image img {
-  width: 100%;
-  margin-left: 10%;
-  position: relative;
-}
-.hero .hero-image::after {
-  content: "";
-  width: 150%;
-  height: 100%;
-  background-color: #5267DF;
-  position: absolute;
-  top: 20%;
-  left: 40%;
-  z-index: -1;
-  border-radius: 316px;
-}
-
-.browsers-container {
-  margin-top: 150px;
-}
 .browsers-container .browsers-flex {
   margin-top: 48px;
   display: flex;
