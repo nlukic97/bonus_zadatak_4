@@ -3,9 +3,13 @@ document.getElementById('email-submit').addEventListener('click',function(){
     console.log(email);
 
     let re = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
+    let form = document.querySelector('.form')
+
     if(email.match(re) === null){
+        showError(form)
         console.log('not email');
     } else {
+        hideError(form)
         submit(email)
         document.getElementById('email').value = ''
     }
@@ -17,6 +21,11 @@ function submit(email){
     console.log('Submitting data',data);
 }
 
-function showError(){
+function showError(item){
     //display the background question mark, and the error text underneath
+    item.classList.add('error')
+}
+
+function hideError(item){
+    item.classList.remove('error')
 }

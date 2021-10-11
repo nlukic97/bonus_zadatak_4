@@ -1,3 +1,4 @@
+@charset "UTF-8";
 a.btn {
   text-decoration: none;
 }
@@ -399,7 +400,10 @@ footer .socials a:not(:last-child) {
 .sign-up-container .sign-up .form {
   margin-top: 35px;
 }
-.sign-up-container .sign-up .form input {
+.sign-up-container .sign-up .form .input-container {
+  display: inline-block;
+}
+.sign-up-container .sign-up .form .input-container input {
   font-size: 14px;
   line-height: 28px;
   letter-spacing: 0.25px;
@@ -410,23 +414,43 @@ footer .socials a:not(:last-child) {
   color: #242A45;
   width: 300px;
 }
-.sign-up-container .sign-up .form input::placeholder, .sign-up-container .sign-up .form input::-webkit-input-placeholder {
+.sign-up-container .sign-up .form .input-container input::placeholder, .sign-up-container .sign-up .form .input-container input::-webkit-input-placeholder {
   border: none;
   color: rgba(36, 42, 69, 0.25);
 }
-.sign-up-container .sign-up .form input:-webkit-autofill, .sign-up-container .sign-up .form input:-webkit-autofill:hover, .sign-up-container .sign-up .form input:-webkit-autofill:focus {
+.sign-up-container .sign-up .form .input-container input:-webkit-autofill, .sign-up-container .sign-up .form .input-container input:-webkit-autofill:hover, .sign-up-container .sign-up .form .input-container input:-webkit-autofill:focus {
   border: none;
   -webkit-text-fill-color: #242A45;
   box-shadow: none;
   -webkit-box-shadow: none;
   transition: background-color 5000s ease-in-out 0s;
 }
-.sign-up-container .sign-up .form.error input {
+.sign-up-container .sign-up .form.error .input-container {
+  position: relative;
+}
+.sign-up-container .sign-up .form.error .input-container input {
   background-image: url("../images/icon-error.svg");
   background-repeat: no-repeat;
   background-position: center right 10px;
   background-size: 20px;
   border: 2px solid #FA5959;
+  position: relative;
+}
+.sign-up-container .sign-up .form.error .input-container::after {
+  content: "Whoops, make sure it’s an email";
+  text-align: left;
+  padding-left: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-size: 10px;
+  letter-spacing: 0.25px;
+  font-style: italic;
+  position: absolute;
+  top: 93%;
+  left: 0;
+  width: calc(100% - 10px);
+  background-color: #FA5959;
+  border-radius: 0 0 5px 5px;
 }
 
 body {
