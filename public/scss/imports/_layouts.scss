@@ -8,8 +8,8 @@
     overflow: hidden;
 }
 
-// ------  navigation ------ 
-nav {
+// ------  navigations (nav and footer) ------ 
+nav, footer {
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -21,6 +21,27 @@ nav {
             &.link, &.btn {
                 text-transform: uppercase;
                 margin: 0 22px;
+            }
+        }
+    }
+}
+
+footer {
+    height: 88px;
+
+    .footer-left-side {
+        display: flex;
+        align-items: center;
+
+        img {
+            padding-right:22px;
+        }
+    }
+
+    .socials {
+        a {
+            &:not(:last-child){
+                padding-right: 40px;
             }
         }
     }
@@ -51,7 +72,7 @@ nav {
 
 // ------ Browsers section ------ 
 .browsers-container {
-    // margin-top: 150px; //might not need this
+    margin-top: 150px;
     
     .browsers-flex {
         margin-top: 48px;
@@ -94,8 +115,6 @@ nav {
     padding: 58px 0 73px 0;
     
     .sign-up {
-        max-width: 408px;
-        margin: 0 auto;
         text-align: center;
         // border: 1px solid red;
         .sub-caption {
@@ -108,8 +127,12 @@ nav {
         
         .heading-2 {
             margin-top: 24px;
+            margin-left: auto;
+            margin-right: auto;
+
             color: #fff;
             line-height: 40px;
+            max-width: 408px;
         }
         
         .form {
@@ -123,6 +146,7 @@ nav {
                 outline: none;
                 border: 1px solid transparent;
                 color:$primary-black;
+                width: 300px;
                 
                 &::placeholder,
                 &::-webkit-input-placeholder {

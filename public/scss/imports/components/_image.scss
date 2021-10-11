@@ -1,12 +1,13 @@
 // ----- hero section ------
 .hero {
     display: flex;
-    justify-content: space-between;
+    // justify-content: space-between; //removed this?
+    justify-content: space-around;
     margin-top: 110px;
     padding-bottom: 5%;
     
     .hero-content, .hero-image {
-        flex:1;
+        // flex:1; //switched this off
     }
 
     .hero-content {
@@ -22,13 +23,13 @@
     }
 
     .hero-image {
-        width: 100%;
+        // width: 100%; //turned this off
         height: min-content;
         position: relative; //should it go here on on the image, and do I need this?
 
         &::after {
             content:'';
-            width: 150%;
+            width: 200%; //changed from 150%
             height: 80%;
             background-color: #5267DF;
             position: absolute;

@@ -11,4 +11,12 @@ a.link {
             color:$primary-red
         }
     }
+
+    &.link-white {
+        color:$color-white;
+
+        &:hover {
+            color:$primary-red
+        }
+    }
 }
