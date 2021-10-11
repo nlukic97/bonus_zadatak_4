@@ -13,12 +13,14 @@
   <link rel="stylesheet" href="css/style.css">
   
   <!-- JavaScript -->
+  <script src="js/accordion.js" defer></script>
+  <script src="js/slider.js" defer></script>
   <script src="js/script.js" defer></script>
   <title>Nikola Lukic | Bonus zadatak 4</title>
 </head>
 <body>
   
-  <!-- Navigation section -->
+  <!-- **************** Navigation section **************** -->
   <div class="container">
     <nav>
       <img src="images/logo-bookmark.svg" alt="bookmark logo" class="logo">
@@ -32,11 +34,121 @@
     </nav>
   </div>
   
-  <!-- ---------- Web browsers section---------- -->
+  <!-- **************** Hero section **************** -->
+  <div class="overflow-hidden">
+    <div class="container">
+      <section class="hero hero-regular">
+        <div class="hero-content">
+          <h1 class="heading-1">A Simple Bookmark Manager</h1>
+          <p>A clean and simple interface to organize your favourite websites. Open a new browser tab and see your sites load instantly. Try it for free.</p>
+          
+          <div class="button-container">
+            <a href="#" class="btn btn-blue btn-shadow">Get it on Chrome</a>
+            <a href="#" class="btn btn-light btn-shadow">Get it on Firefox</a>
+          </div>
+          
+        </div>
+        <div class="hero-image">
+          <img src="images/illustration-hero.svg" alt="hero image">
+          <div class="blue-element"></div>
+        </div>
+      </section>
+    </div>
+  </div>
+  
+  <!-- **************** Features section **************** -->
+  <section class="features">
+
+    <!-- content -->
+    <div class="container">
+      <div class="section-block text-center">
+        <h2 class="heading-2">Features</h2>
+        <p>Our aim is to make it quick and easy for you to access your favourite websites. Your bookmarks sync between your devices so you can access them on the go.</p>
+      </div>
+    </div>
+    
+    <!-- buttons to toggle slide visibility -->
+    <div class="slider-buttons">
+      <button class="slider-btn active">Simple Bookmarking</button>
+      <button class="slider-btn">Speedy Searching</button>
+      <button class="slider-btn">Easy Sharing</button>
+    </div>
+    
+    <!-- Slide 1 -->
+    <div class="slides">
+      <div class="overflow-hidden slide visible">
+        <div class="container">
+          <section class="hero hero-reverse">
+            <div class="hero-content">
+              <h2 class="heading-2">Bookmark in one click</h2>
+              <p>Organize your bookmarks however you like. Our simple drag-and-drop interface gives you complete control over how you manage your favourite sites.</p>
+              
+              <div class="button-container">
+                <a href="#" class="btn btn-blue btn-shadow">More Info</a>
+              </div>
+              
+            </div>
+            <div class="hero-image">
+              <img src="images/illustration-features-tab-1.svg" alt="hero image">
+              <div class="blue-element"></div>
+            </div>
+          </section>
+        </div>
+      </div>
+
+    <!-- Slide 2 -->
+      <div class="overflow-hidden slide">
+        <div class="container">
+          <section class="hero hero-reverse">
+            <div class="hero-content">
+              <h2 class="heading-2">Intelligent search</h2>
+              <p>Our powerful search feature will help you find saved sites in no time at all. No need to trawl through all of your bookmarks.</p>
+              
+              <div class="button-container">
+                <a href="#" class="btn btn-blue btn-shadow">More Info</a>
+              </div>
+              
+            </div>
+            <div class="hero-image">
+              <img src="images/illustration-features-tab-2.svg" alt="hero image">
+              <div class="blue-element"></div>
+            </div>
+          </section>
+        </div>
+      </div>
+    
+      <!-- Slide 3 -->
+      <div class="overflow-hidden slide">
+        <div class="container">
+          <section class="hero hero-reverse">
+            <div class="hero-content">
+              <h2 class="heading-2">Share your bookmarks</h2>
+              <p>Easily share your bookmarks and collections with others. Create a shareable link that you can send at the click of a button.</p>
+              
+              <div class="button-container">
+                <a href="#" class="btn btn-blue btn-shadow">More Info</a>
+              </div>
+              
+            </div>
+            <div class="hero-image">
+              <img src="images/illustration-features-tab-3.svg" alt="hero image">
+              <div class="blue-element"></div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+  
+  <!-- **************** Web browsers section **************** -->
   <div class="container">
     <div class="browsers-container">
       <h2 class="heading-2 text-center">Download the extension</h2>
-      <p class="section-text text-center">We’ve got more browsers in the pipeline. Please do let us know if you’ve got a favourite you’d like us to prioritize.</p>
+      <p class="section-block pt-16 text-center">We’ve got more browsers in the pipeline. Please do let us know if you’ve got a favourite you’d like us to prioritize.</p>
       <section class="browsers-flex">
         
         <!-- card component chrome-->
@@ -69,6 +181,76 @@
       </section>
     </div>
   </div>
+  
+  <!-- **************** FAQ section **************** -->
+  <div class="container">
+    <section class="faq">
+      <h2 class="heading-2 text-center">Frequently Asked Questions</h2>
+      <p class="section-block pt-16 text-center">Here are some of our FAQs. If you have any other questions you’d like answered please feel free to email us.</p>
+      
+      <!--  Accordion -->
+      <div class="questions section-block">
+        
+        <!-- Question 1 -->
+        <div class="question-component">
+          <div class='clickable-container'>
+            <span class="question-text">What is a bookmark?</span>
+            <button class="btn"></button>
+          </div>
+          <p class="answer">You can invite up to 2 additional users on the Free plan. There is no limit on team members for the Premium plan.</p>
+        </div>
+        
+        <!-- Question 2 -->
+        <div class="question-component">
+          <div class='clickable-container'>
+            <span class="question-text">How can I request a new browser?</span>
+            <button class="btn"></button>
+          </div>
+          <p class="answer">No more than 2GB. All files in your account must fit your allotted storage space.</p>
+        </div>
+        
+        <!-- Question 3 -->
+        <div class="question-component">
+          <div class='clickable-container'>
+            <span class="question-text">Is there a mobile app?</span>
+            <button class="btn"></button>
+          </div>
+          <p class="answer">Click “Forgot password” from the login page or “Change password” from your profile page. A reset link will be emailed to you.</p>
+        </div>
+        
+        <!-- Question 4 -->
+        <div class="question-component">
+          <div class='clickable-container'>
+            <span class="question-text">What about other Chromium browsers?</span>
+            <button class="btn"></button>
+          </div>
+          <p class="answer">Yes! Send us a message and we’ll process your request no questions asked..</p>
+        </div>
+        
+      </div>
+      
+      <!-- btn -->
+      <div class="text-center">
+        <a href="#" class="btn btn-blue btn-shadow">More Info</a>
+      </div>
+      
+    </section>
+  </div>
+  
+  <div class="sign-up-container">
+    <div class="container">
+      <div class="sign-up">
+        <span class="sub-caption">35,000+ already joined</span>
+        <h2 class="heading-2">Stay up-to-date with what we're doing</h2>
+        
+        <div class="form">
+          <input type="email" name="email" id="email" placeholder="Enter your email address">
+          <button class="btn btn-red">Contact Us</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
   
   
 </body>

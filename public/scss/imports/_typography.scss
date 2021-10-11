@@ -12,6 +12,7 @@
     font-size: 32px;
     color: $primary-black;
     letter-spacing: -0.1px;
+    line-height: 52px;
 }
 
 .heading-3 {
@@ -27,12 +28,21 @@
     font-size: 18px;
     line-height:28px;
     letter-spacing: 0px;
-    color: rgba(36, 42, 69, .5);
+    color: $paragraph-color;
 }
 
-.answer-text {
-    font-size: 16x;
+.answer {
+    color: $paragraph-color;
+    font-size: 16px;
     line-height:36px;
     letter-spacing: 0.15px;
-    color: rgba(36, 42, 69, .75);
+}
+
+// --- Element styling
+p {
+    color: $paragraph-color;
+    font-size: 18px;
+    line-height: 28px;
+    letter-spacing: 0;
+    max-width: 540px;
 }

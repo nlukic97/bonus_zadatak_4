@@ -1,0 +1,74 @@
+// ----- hero section ------
+.hero {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 110px;
+    padding-bottom: 5%;
+    
+    .hero-content, .hero-image {
+        flex:1;
+    }
+
+    .hero-content {
+        padding-top: 70px;
+
+        p {
+            margin-top: 20px;
+        }
+
+        .button-container {
+            margin-top: 32px;
+        }
+    }
+
+    .hero-image {
+        width: 100%;
+        height: min-content;
+        position: relative; //should it go here on on the image, and do I need this?
+
+        &::after {
+            content:'';
+            width: 150%;
+            height: 80%;
+            background-color: #5267DF;
+            position: absolute;
+            top: 30%;
+            z-index: -1;
+            border-radius:316px;
+        } 
+    }
+
+    // '.hero-regular' ---> for the regular layout (shown in the hero section)
+    &.hero-regular {
+
+        .hero-image {
+            text-align: right;
+    
+            img {  
+                margin-left: 10%; //change this with the media query
+            }
+    
+            // /* This causes an error with the overflow, otherwise it will work. */
+            &::after {
+                left: 40%;
+            } 
+        }
+    }
+
+    // '.hero-reverse' ---> reverse layout shown in other sections with images
+    &.hero-reverse {
+        flex-direction: row-reverse;
+
+        .hero-image {
+            text-align: left;
+    
+            img {  
+                margin-left: 0; //change this with the media query
+            }
+    
+            &::after {
+                right: 30%;
+            } 
+        }
+    }
+}
