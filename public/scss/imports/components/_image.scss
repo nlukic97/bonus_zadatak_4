@@ -63,11 +63,11 @@
             text-align: left;
     
             img {  
-                margin-left: -10%; //change this with the media query
+                margin-left: 0; //change this with the media query
             }
     
             &::after {
-                right: 40%;
+                right: 30%;
             } 
         }
     }

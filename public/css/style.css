@@ -209,10 +209,10 @@ a.link.link-red:hover {
   text-align: left;
 }
 .hero.hero-reverse .hero-image img {
-  margin-left: -10%;
+  margin-left: 0;
 }
 .hero.hero-reverse .hero-image::after {
-  right: 40%;
+  right: 30%;
 }
 
 .btn-shadow {
@@ -306,6 +306,13 @@ nav .menu-items a.link, nav .menu-items a.btn {
 }
 .slider-buttons .slider-btn {
   flex: 1;
+}
+
+.slides .slide {
+  display: none;
+}
+.slides .slide.visible {
+  display: block;
 }
 
 .browsers-container .browsers-flex {

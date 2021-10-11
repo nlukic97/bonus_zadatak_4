@@ -38,6 +38,16 @@ nav {
     }
 }
 
+.slides {
+    .slide {
+        display: none;
+
+        &.visible {
+            display: block;
+        }
+    }
+}
+
 
 // ------ Browsers section ------ 
 .browsers-container {

@@ -8,7 +8,7 @@ buttons.forEach((btn,index) => {
 });
 
 function toggleActiveSlide(index){
-    let slides = document.querySelectorAll('.slide')
+    let slides = document.querySelectorAll('.slides .slide')
     slides.forEach(slide => {
         slide.classList.remove('visible')
     });
