@@ -339,9 +339,6 @@ nav #close-icon {
 nav #toggler {
   display: none;
 }
-nav #hamburger-menu {
-  display: none;
-}
 
 footer {
   height: 88px;
@@ -582,6 +579,7 @@ footer .socials a:not(:last-child) {
     display: block;
     position: absolute;
     right: 0;
+    top: 0;
     z-index: 2;
     width: 30px;
     height: 30px;
@@ -590,16 +588,35 @@ footer .socials a:not(:last-child) {
     display: none;
     border: 1px solid red;
   }
-  nav #toggler:checked ~ #hamburger-menu {
+  nav #toggler:checked ~ .menu-items {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
     background-color: rgba(36, 42, 69, 0.95);
     color: #fff;
-    display: block;
     position: fixed;
     left: 0;
     top: 0;
     width: 100vw;
     height: 100vh;
     z-index: 1;
+    padding-top: 40px;
+  }
+  nav #toggler:checked ~ .menu-items a {
+    text-transform: uppercase;
+    color: #fff;
+    padding: 24px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+  }
+  nav #toggler:checked ~ .menu-items a:nth-child(3) {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  }
+  nav #toggler:checked ~ .menu-items a.btn {
+    margin-top: 30px;
+    background-color: transparent;
+    box-shadow: none;
+    border: 2px solid #fff;
+    padding: 14px 0;
   }
 }
 @media screen and (max-width: 807px) {

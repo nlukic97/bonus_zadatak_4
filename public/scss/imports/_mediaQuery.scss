@@ -96,6 +96,7 @@
 }
 
 
+// media query to display the hamburger menu and hide the regular menu
 @media screen and (max-width:840px){
     nav {
         position: relative;
@@ -143,6 +144,7 @@
                     display: block;
                     position: absolute;
                     right: 0;
+                    top: 0;
                     z-index: 2;
                     width: 30px;
                     height: 30px;
@@ -153,16 +155,38 @@
                     border: 1px solid red;
                 }
 
-                ~ #hamburger-menu {
+                ~ .menu-items {
+                    display: flex;
+                    flex-direction: column;
+                    text-align: center;
                     background-color:rgba(36, 42, 69, .95);
                     color: #fff;
-                    display: block;
                     position: fixed;
                     left: 0;
                     top: 0;
                     width: 100vw;
                     height:100vh;
                     z-index: 1;
+                    padding-top: 40px;
+
+                    a {
+                        text-transform: uppercase;
+                        color: #fff;
+                        padding: 24px 0;
+                        border-top:1px solid rgba(255, 255, 255, 0.15);
+                        
+                        &:nth-child(3) {
+                            border-bottom:1px solid rgba(255, 255, 255, 0.15);
+                        }
+
+                        &.btn {
+                            margin-top: 30px;
+                            background-color:transparent;
+                            box-shadow: none;
+                            border: 2px solid #fff;
+                            padding: 14px 0;
+                        }
+                    }
                 }
             }
         }
