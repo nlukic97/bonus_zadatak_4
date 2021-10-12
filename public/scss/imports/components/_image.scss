@@ -1,7 +1,6 @@
 // ----- hero section ------
 .hero {
     display: flex;
-    // justify-content: space-between; //removed this?
     justify-content: space-around;
     margin-top: 110px;
     padding-bottom: 5%;
@@ -26,6 +25,9 @@
         // width: 100%; //turned this off
         height: min-content;
         position: relative; //should it go here on on the image, and do I need this?
+        img {
+            width: 100%;
+        }
 
         &::after {
             content:'';
@@ -33,7 +35,7 @@
             height: 80%;
             background-color: #5267DF;
             position: absolute;
-            top: 30%;
+            top: 25%;
             z-index: -1;
             border-radius:316px;
         } 
@@ -41,6 +43,7 @@
 
     // '.hero-regular' ---> for the regular layout (shown in the hero section)
     &.hero-regular {
+        align-items: center; //is this ok?
 
         .hero-image {
             text-align: right;
@@ -64,11 +67,12 @@
             text-align: left;
     
             img {  
-                margin-left: 0; //change this with the media query
+                margin-left: -10%; //change this with the media query
             }
     
             &::after {
                 right: 30%;
+                top: 40%;
             } 
         }
     }
