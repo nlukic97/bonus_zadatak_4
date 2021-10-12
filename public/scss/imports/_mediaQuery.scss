@@ -67,19 +67,22 @@
     .sign-up-container {
         .sign-up {
             .form {
-                // .input-container {
-                //     width: 100%;
+                .input-container {
+                    max-width: 100%;
+                    display: block;
 
-                //     input {
-                //         display: inline-block;
-                //         width: 100%;
-                //     }
-                // }
+                    input {
+                        width: 100%;
+                        box-sizing: border-box;
+                        -webkit-box-sizing:border-box;
+                        -moz-box-sizing: border-box;
+                    }
+                }
 
-                // button {
-                //     width: 100%;
-                //     display: inline-block;
-                // }
+                button {
+                    width: 100%;
+                    display: inline-block;
+                }
             }
         }
     }
