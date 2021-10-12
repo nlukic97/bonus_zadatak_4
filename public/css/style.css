@@ -320,7 +320,7 @@ footer .footer-left-side {
   display: flex;
   align-items: center;
 }
-footer .footer-left-side img {
+footer .footer-left-side #footer-logo {
   padding-right: 22px;
 }
 footer .socials a:not(:last-child) {
