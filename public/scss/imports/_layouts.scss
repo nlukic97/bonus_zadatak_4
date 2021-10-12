@@ -27,6 +27,25 @@ nav, footer {
     }
 }
 
+nav {
+
+    #hamburger-icon {
+        display: none;
+    }
+
+    #close-icon {
+        display: none;
+    }
+    
+    #toggler {
+        display: none;
+    }
+    
+    #hamburger-menu {
+        display: none;
+    }
+}
+
 footer {
     height: 88px;
 

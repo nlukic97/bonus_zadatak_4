@@ -330,6 +330,19 @@ nav .menu-items a.link, nav .menu-items a.btn, footer .menu-items a.link, footer
   margin: 0 22px;
 }
 
+nav #hamburger-icon {
+  display: none;
+}
+nav #close-icon {
+  display: none;
+}
+nav #toggler {
+  display: none;
+}
+nav #hamburger-menu {
+  display: none;
+}
+
 footer {
   height: 88px;
 }
@@ -526,6 +539,67 @@ footer .socials a:not(:last-child) {
   }
   .sign-up-container .sign-up .form.error button {
     margin-top: 40px;
+  }
+}
+@media screen and (max-width: 840px) {
+  nav {
+    position: relative;
+  }
+  nav .menu-items {
+    display: none;
+  }
+  nav #hamburger-icon {
+    display: block;
+    position: absolute;
+    right: 0;
+    z-index: -4;
+    width: 30px;
+    height: 30px;
+  }
+  nav #close-icon {
+    display: none;
+  }
+  nav #toggler {
+    display: inline;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 30px;
+    height: 30px;
+    opacity: 0;
+    z-index: 1;
+  }
+  nav #toggler:hover {
+    cursor: pointer;
+  }
+  nav #toggler:checked {
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 3;
+  }
+  nav #toggler:checked ~ #close-icon {
+    display: block;
+    position: absolute;
+    right: 0;
+    z-index: 2;
+    width: 30px;
+    height: 30px;
+  }
+  nav #toggler:checked ~ #hamburger-icon {
+    display: none;
+    border: 1px solid red;
+  }
+  nav #toggler:checked ~ #hamburger-menu {
+    background-color: rgba(36, 42, 69, 0.95);
+    color: #fff;
+    display: block;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1;
   }
 }
 @media screen and (max-width: 807px) {
