@@ -81,9 +81,64 @@
 
                 button {
                     width: 100%;
+                    margin-top: 15px;
                     display: inline-block;
                 }
+
+                &.error {
+                    button {
+                        margin-top: 40px;
+                    }
+                }
             }
+        }
+    }
+}
+
+@media screen and(max-width:807px) {
+    footer {
+        flex-direction: column;
+        height: unset;
+        padding: 40px 0;
+
+        
+        .footer-left-side {
+            flex-direction: column;
+            
+            #footer-logo {
+                padding: 0 0 18px;
+            }
+
+            .menu-items {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                a {
+                    padding: 18px 0;
+                }
+            }
+
+            
+        }
+
+        .socials {
+            padding-top: 18px;
+        }
+    }
+}
+
+
+@media screen and (max-width:372px) {
+    .container {
+        max-width: 1290px;
+        margin: 0 auto;
+    }
+
+    nav {
+        .menu-items {
+            
         }
     }
 }

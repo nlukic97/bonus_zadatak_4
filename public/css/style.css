@@ -521,7 +521,42 @@ footer .socials a:not(:last-child) {
   }
   .sign-up-container .sign-up .form button {
     width: 100%;
+    margin-top: 15px;
     display: inline-block;
+  }
+  .sign-up-container .sign-up .form.error button {
+    margin-top: 40px;
+  }
+}
+@media screen and (max-width: 807px) {
+  footer {
+    flex-direction: column;
+    height: unset;
+    padding: 40px 0;
+  }
+  footer .footer-left-side {
+    flex-direction: column;
+  }
+  footer .footer-left-side #footer-logo {
+    padding: 0 0 18px;
+  }
+  footer .footer-left-side .menu-items {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  footer .footer-left-side .menu-items a {
+    padding: 18px 0;
+  }
+  footer .socials {
+    padding-top: 18px;
+  }
+}
+@media screen and (max-width: 372px) {
+  .container {
+    max-width: 1290px;
+    margin: 0 auto;
   }
 }
 body {
