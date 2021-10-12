@@ -339,6 +339,9 @@ nav #close-icon {
 nav #toggler {
   display: none;
 }
+nav #logo-white {
+  display: none;
+}
 
 footer {
   height: 88px;
@@ -541,6 +544,7 @@ footer .socials a:not(:last-child) {
 @media screen and (max-width: 840px) {
   nav {
     position: relative;
+    padding-top: 10px;
   }
   nav .menu-items {
     display: none;
@@ -559,7 +563,7 @@ footer .socials a:not(:last-child) {
   nav #toggler {
     display: inline;
     position: absolute;
-    top: 0;
+    top: 10px;
     right: 0;
     width: 30px;
     height: 30px;
@@ -570,16 +574,26 @@ footer .socials a:not(:last-child) {
     cursor: pointer;
   }
   nav #toggler:checked {
-    position: absolute;
-    right: 0;
-    top: 0;
+    position: fixed;
+    right: 24px;
+    top: 22px;
     z-index: 3;
+  }
+  nav #toggler:checked ~ .logo {
+    display: none;
+  }
+  nav #toggler:checked ~ #logo-white {
+    display: block;
+    position: fixed;
+    top: 22px;
+    left: 24px;
+    z-index: 2;
   }
   nav #toggler:checked ~ #close-icon {
     display: block;
-    position: absolute;
-    right: 0;
-    top: 0;
+    position: fixed;
+    top: 22px;
+    right: 24px;
     z-index: 2;
     width: 30px;
     height: 30px;
@@ -600,7 +614,7 @@ footer .socials a:not(:last-child) {
     width: 100vw;
     height: 100vh;
     z-index: 1;
-    padding-top: 40px;
+    padding-top: 70px;
   }
   nav #toggler:checked ~ .menu-items a {
     text-transform: uppercase;
