@@ -1,3 +1,4 @@
+@charset "UTF-8";
 a.btn {
   text-decoration: none;
 }
@@ -63,9 +64,18 @@ button.slider-btn:hover {
   color: #FA5959;
 }
 button.slider-btn.active {
-  border-bottom: 4px solid #FA5959;
-  padding: 30px 0;
   color: #242a45;
+  position: relative;
+}
+button.slider-btn.active::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background-color: #FA5959;
+  margin: 0 auto;
 }
 
 a.link {
@@ -78,6 +88,12 @@ a.link.link-red {
   color: #242A45;
 }
 a.link.link-red:hover {
+  color: #FA5959;
+}
+a.link.link-white {
+  color: #fff;
+}
+a.link.link-white:hover {
   color: #FA5959;
 }
 
@@ -162,12 +178,9 @@ a.link.link-red:hover {
 
 .hero {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   margin-top: 110px;
   padding-bottom: 5%;
-}
-.hero .hero-content, .hero .hero-image {
-  flex: 1;
 }
 .hero .hero-content {
   padding-top: 70px;
@@ -179,19 +192,24 @@ a.link.link-red:hover {
   margin-top: 32px;
 }
 .hero .hero-image {
-  width: 100%;
   height: min-content;
   position: relative;
 }
+.hero .hero-image img {
+  width: 100%;
+}
 .hero .hero-image::after {
   content: "";
-  width: 150%;
+  width: 200%;
   height: 80%;
   background-color: #5267DF;
   position: absolute;
-  top: 30%;
+  top: 25%;
   z-index: -1;
   border-radius: 316px;
+}
+.hero.hero-regular {
+  align-items: center;
 }
 .hero.hero-regular .hero-image {
   text-align: right;
@@ -209,10 +227,11 @@ a.link.link-red:hover {
   text-align: left;
 }
 .hero.hero-reverse .hero-image img {
-  margin-left: 0;
+  margin-left: -10%;
 }
 .hero.hero-reverse .hero-image::after {
   right: 30%;
+  top: 40%;
 }
 
 .btn-shadow {
@@ -231,6 +250,14 @@ a.link.link-red:hover {
 
 .pt-16 {
   margin-top: 16px;
+}
+
+.d-inline-block {
+  display: inline-block;
+}
+
+.bg-dark {
+  background-color: #242A45;
 }
 
 .heading-1 {
@@ -278,8 +305,13 @@ p {
   max-width: 540px;
 }
 
+p.smaller-width {
+  max-width: 445px;
+}
+
 .container {
   max-width: 1290px;
+  width: 80%;
   margin: 0 auto;
 }
 
@@ -287,24 +319,51 @@ p {
   overflow: hidden;
 }
 
-nav {
+nav, footer {
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-nav .menu-items a.link, nav .menu-items a.btn {
+nav .menu-items a.link, nav .menu-items a.btn, footer .menu-items a.link, footer .menu-items a.btn {
   text-transform: uppercase;
   margin: 0 22px;
+}
+
+nav #hamburger-icon {
+  display: none;
+}
+nav #close-icon {
+  display: none;
+}
+nav #toggler {
+  display: none;
+}
+nav #logo-white {
+  display: none;
+}
+
+footer {
+  height: 88px;
+}
+footer .footer-left-side {
+  display: flex;
+  align-items: center;
+}
+footer .footer-left-side #footer-logo {
+  padding-right: 22px;
+}
+footer .socials a:not(:last-child) {
+  padding-right: 40px;
 }
 
 .slider-buttons {
   display: flex;
   margin: 0 auto;
   max-width: 730px;
-  border-bottom: 1px solid rgba(73, 93, 207, 0.2);
 }
 .slider-buttons .slider-btn {
+  border-bottom: 1px solid rgba(73, 93, 207, 0.2);
   flex: 1;
 }
 
@@ -315,6 +374,9 @@ nav .menu-items a.link, nav .menu-items a.btn {
   display: block;
 }
 
+.browsers-container {
+  margin-top: 150px;
+}
 .browsers-container .browsers-flex {
   margin-top: 48px;
   display: flex;
@@ -348,8 +410,6 @@ nav .menu-items a.link, nav .menu-items a.btn {
   padding: 58px 0 73px 0;
 }
 .sign-up-container .sign-up {
-  max-width: 408px;
-  margin: 0 auto;
   text-align: center;
 }
 .sign-up-container .sign-up .sub-caption {
@@ -361,13 +421,19 @@ nav .menu-items a.link, nav .menu-items a.btn {
 }
 .sign-up-container .sign-up .heading-2 {
   margin-top: 24px;
+  margin-left: auto;
+  margin-right: auto;
   color: #fff;
   line-height: 40px;
+  max-width: 408px;
 }
 .sign-up-container .sign-up .form {
   margin-top: 35px;
 }
-.sign-up-container .sign-up .form #email {
+.sign-up-container .sign-up .form .input-container {
+  display: inline-block;
+}
+.sign-up-container .sign-up .form .input-container input {
   font-size: 14px;
   line-height: 28px;
   letter-spacing: 0.25px;
@@ -376,19 +442,228 @@ nav .menu-items a.link, nav .menu-items a.btn {
   outline: none;
   border: 1px solid transparent;
   color: #242A45;
+  width: 300px;
 }
-.sign-up-container .sign-up .form #email::placeholder, .sign-up-container .sign-up .form #email::-webkit-input-placeholder {
+.sign-up-container .sign-up .form .input-container input::placeholder, .sign-up-container .sign-up .form .input-container input::-webkit-input-placeholder {
   border: none;
   color: rgba(36, 42, 69, 0.25);
 }
-.sign-up-container .sign-up .form #email:-webkit-autofill, .sign-up-container .sign-up .form #email:-webkit-autofill:hover, .sign-up-container .sign-up .form #email:-webkit-autofill:focus {
+.sign-up-container .sign-up .form .input-container input:-webkit-autofill, .sign-up-container .sign-up .form .input-container input:-webkit-autofill:hover, .sign-up-container .sign-up .form .input-container input:-webkit-autofill:focus {
   border: none;
   -webkit-text-fill-color: #242A45;
   box-shadow: none;
   -webkit-box-shadow: none;
   transition: background-color 5000s ease-in-out 0s;
 }
+.sign-up-container .sign-up .form.error .input-container {
+  position: relative;
+}
+.sign-up-container .sign-up .form.error .input-container input {
+  background-image: url("../images/icon-error.svg");
+  background-repeat: no-repeat;
+  background-position: center right 10px;
+  background-size: 20px;
+  border: 2px solid #FA5959;
+  position: relative;
+}
+.sign-up-container .sign-up .form.error .input-container::after {
+  content: "Whoops, make sure it’s an email";
+  text-align: left;
+  padding-left: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-size: 10px;
+  letter-spacing: 0.25px;
+  font-style: italic;
+  position: absolute;
+  top: 93%;
+  left: 0;
+  width: calc(100% - 10px);
+  background-color: #FA5959;
+  border-radius: 0 0 5px 5px;
+}
 
+@media screen and (max-width: 936px) {
+  .hero.hero-regular, .hero.hero-reverse {
+    flex-direction: column-reverse;
+  }
+  .hero.hero-regular .hero-content, .hero.hero-reverse .hero-content {
+    text-align: center;
+    padding-top: 100px;
+  }
+  .hero.hero-regular .hero-content p, .hero.hero-reverse .hero-content p {
+    margin: 20px auto 0;
+  }
+  .hero.hero-regular .hero-image img, .hero.hero-reverse .hero-image img {
+    margin: 0;
+  }
+
+  .slides .slide:not(:first-child) .hero.hero-reverse .hero-image::after {
+    top: 25%;
+  }
+
+  .features {
+    margin-top: 150px;
+  }
+  .features .slider-buttons {
+    flex-direction: column;
+  }
+  .features .slider-buttons .slider-btn.active::after {
+    left: 50%;
+    transform: translateX(-50%);
+    width: 143px;
+  }
+
+  .browsers-container .browsers-flex {
+    flex-direction: column;
+    align-items: center;
+  }
+  .browsers-container .browsers-flex .card {
+    width: 80%;
+  }
+
+  .sign-up-container .sign-up .form .input-container {
+    max-width: 100%;
+    display: block;
+  }
+  .sign-up-container .sign-up .form .input-container input {
+    width: 100%;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+  }
+  .sign-up-container .sign-up .form button {
+    width: 100%;
+    margin-top: 15px;
+    display: inline-block;
+  }
+  .sign-up-container .sign-up .form.error button {
+    margin-top: 40px;
+  }
+}
+@media screen and (max-width: 840px) {
+  nav {
+    position: relative;
+    padding-top: 10px;
+  }
+  nav .menu-items {
+    display: none;
+  }
+  nav #hamburger-icon {
+    display: block;
+    position: absolute;
+    right: 0;
+    z-index: -4;
+    width: 30px;
+    height: 30px;
+  }
+  nav #close-icon {
+    display: none;
+  }
+  nav #toggler {
+    display: inline;
+    position: absolute;
+    top: 10px;
+    right: 0;
+    width: 30px;
+    height: 30px;
+    opacity: 0;
+    z-index: 1;
+  }
+  nav #toggler:hover {
+    cursor: pointer;
+  }
+  nav #toggler:checked {
+    position: fixed;
+    right: 24px;
+    top: 22px;
+    z-index: 3;
+  }
+  nav #toggler:checked ~ .logo {
+    display: none;
+  }
+  nav #toggler:checked ~ #logo-white {
+    display: block;
+    position: fixed;
+    top: 22px;
+    left: 24px;
+    z-index: 2;
+  }
+  nav #toggler:checked ~ #close-icon {
+    display: block;
+    position: fixed;
+    top: 22px;
+    right: 24px;
+    z-index: 2;
+    width: 30px;
+    height: 30px;
+  }
+  nav #toggler:checked ~ #hamburger-icon {
+    display: none;
+    border: 1px solid red;
+  }
+  nav #toggler:checked ~ .menu-items {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background-color: rgba(36, 42, 69, 0.95);
+    color: #fff;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1;
+    padding-top: 70px;
+  }
+  nav #toggler:checked ~ .menu-items a {
+    text-transform: uppercase;
+    color: #fff;
+    padding: 24px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+  }
+  nav #toggler:checked ~ .menu-items a:nth-child(3) {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  }
+  nav #toggler:checked ~ .menu-items a.btn {
+    margin-top: 30px;
+    background-color: transparent;
+    box-shadow: none;
+    border: 2px solid #fff;
+    padding: 14px 0;
+  }
+}
+@media screen and (max-width: 807px) {
+  footer {
+    flex-direction: column;
+    height: unset;
+    padding: 40px 0;
+  }
+  footer .footer-left-side {
+    flex-direction: column;
+  }
+  footer .footer-left-side #footer-logo {
+    padding: 0 0 18px;
+  }
+  footer .footer-left-side .menu-items {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  footer .footer-left-side .menu-items a {
+    padding: 18px 0;
+  }
+  footer .socials {
+    padding-top: 18px;
+  }
+}
+@media screen and (max-width: 372px) {
+  .container {
+    max-width: 1290px;
+    margin: 0 auto;
+  }
+}
 body {
   font-family: "Rubik", sans-serif;
 }
