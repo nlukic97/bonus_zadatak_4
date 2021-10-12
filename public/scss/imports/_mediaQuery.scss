@@ -1,28 +1,26 @@
 @media screen and(max-width:936px) {
-    .slides {
-        .slide {
-            .hero {
-                &.hero-regular, &.hero-reverse {
-                    flex-direction: column-reverse;
-                    
-                    .hero-content {
-                        text-align: center;
-                        padding-top: 100px;
-                        
-                        p {
-                            margin: 20px auto 0;
-                        }
-                    }
-                    
-                    .hero-image {
-                        img {
-                            margin: 0;
-                        }
-                    }
+    .hero {
+        &.hero-regular, &.hero-reverse {
+            flex-direction: column-reverse;
+            
+            .hero-content {
+                text-align: center;
+                padding-top: 100px;
+                
+                p {
+                    margin: 20px auto 0;
+                }
+            }
+            
+            .hero-image {
+                img {
+                    margin: 0;
                 }
             }
         }
-        
+    }
+    
+    .slides {   
         //changing the distance of the last two slides be more up (away from the next paragraph)
         .slide:not(:first-child){
             .hero {
@@ -38,7 +36,7 @@
         }
     }
     
-
+    
     .features {
         margin-top: 150px;
         
@@ -54,15 +52,19 @@
             }
         }
     }
-
+    
     .browsers-container {
         .browsers-flex {
             flex-direction: column;
             align-items: center;
-
+            
             .card {
                 width: 80%;
             }
         }
+    }
+
+    .sign-up-container {
+        
     }
 }

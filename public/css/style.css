@@ -471,19 +471,20 @@ footer .socials a:not(:last-child) {
 }
 
 @media screen and (max-width: 936px) {
-  .slides .slide .hero.hero-regular, .slides .slide .hero.hero-reverse {
+  .hero.hero-regular, .hero.hero-reverse {
     flex-direction: column-reverse;
   }
-  .slides .slide .hero.hero-regular .hero-content, .slides .slide .hero.hero-reverse .hero-content {
+  .hero.hero-regular .hero-content, .hero.hero-reverse .hero-content {
     text-align: center;
     padding-top: 100px;
   }
-  .slides .slide .hero.hero-regular .hero-content p, .slides .slide .hero.hero-reverse .hero-content p {
+  .hero.hero-regular .hero-content p, .hero.hero-reverse .hero-content p {
     margin: 20px auto 0;
   }
-  .slides .slide .hero.hero-regular .hero-image img, .slides .slide .hero.hero-reverse .hero-image img {
+  .hero.hero-regular .hero-image img, .hero.hero-reverse .hero-image img {
     margin: 0;
   }
+
   .slides .slide:not(:first-child) .hero.hero-reverse .hero-image::after {
     top: 25%;
   }
