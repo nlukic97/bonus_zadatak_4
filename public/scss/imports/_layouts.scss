@@ -53,9 +53,9 @@ footer {
     display: flex;
     margin: 0 auto;
     max-width: 730px;
-    border-bottom: 1px solid rgba(73, 93, 207,0.2);
-
+    
     .slider-btn {
+        border-bottom: 1px solid rgba(73, 93, 207,0.2);
         flex: 1;
     }
 }

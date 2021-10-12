@@ -17,5 +17,17 @@
 
     .features {
         margin-top: 150px;
+
+        .slider-buttons {
+            flex-direction: column;
+
+            .slider-btn {
+                &.active::after {
+                    left: calc(50%);
+                    transform: translateX(-50%);
+                    width:143px;
+                }
+            }
+        }
     }
 }
