@@ -2,7 +2,6 @@ document.querySelectorAll('.questions .question-component .clickable-container')
     
     //listener for click on question
     question.addEventListener('click',()=>{
-        console.log('click');
         let element = question.closest('.question-component')
         toggleVisibility(element)
     })
